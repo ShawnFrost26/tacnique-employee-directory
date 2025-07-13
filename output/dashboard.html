@@ -1,0 +1,122 @@
+
+<div id="filterSidebar" class="sidebar">
+  <h3>Filter Employees</h3>
+  <label>First Name:</label>
+  <input type="text" id="filterFirstName" />
+
+  <label>Department:</label>
+  <input type="text" id="filterDepartment" />
+
+  <label>Role:</label>
+  <input type="text" id="filterRole" />
+
+  <div class="filter-actions">
+    <button id="applyFilters">Apply</button>
+    <button id="resetFilters">Reset</button>
+  </div>
+</div>
+<div id="formSidebar" class="form-sidebar hidden">
+  <h3>Add Employee</h3>
+  <form id="employeeForm">
+    <input type="hidden" id="empId" />
+
+    <label>First Name:</label>
+    <input type="text" id="firstName" required />
+
+    <label>Last Name:</label>
+    <input type="text" id="lastName" required />
+
+    <label>Email:</label>
+    <input type="email" id="email" required />
+
+    <label>Department:</label>
+    <input type="text" id="department" required />
+
+    <label>Role:</label>
+    <input type="text" id="role" required />
+
+    <div class="form-sidebar-actions">
+      <button type="button" id="cancelFormBtn">Cancel</button>
+      <button type="submit" id="submitFormBtn">Add</button>
+    </div>
+  </form>
+</div>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Employee Directory</title>
+ <link rel="stylesheet" href="../public/css/main.css" />
+  <link rel="stylesheet" href="../public/css/card.css" />
+  <link rel="stylesheet" href="../public/css/controls.css" />
+  <link rel="stylesheet" href="../public/css/sidebar.css" />
+  <link rel="stylesheet" href="../public/css/form.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Employee Directory</h1>
+  </header>
+
+  <main>
+  <section class="controls">
+    <input type="text" id="searchInput" placeholder="Search by name/email" />
+    <button id="filterBtn">Filter</button>
+    <button id="addBtn">Add Employee</button>
+    <label for="pageSizeSelect">Show:</label>
+<select id="pageSizeSelect">
+  <option value="10">10</option>
+  <option value="25">25</option>
+  <option value="50">50</option>
+  <option value="100">100</option>
+</select>
+
+  </section>
+
+  <section class="employee-grid">
+<div class="employee-card">
+  <div class="info">
+    <p><strong>Alice Smith</strong></p>
+    <p><strong>Email:</strong> alice@example.com</p>
+    <p><strong>Department:</strong> HR</p>
+    <p><strong>Role:</strong> Manager</p>
+  </div>
+  <div class="actions">
+    <button class="edit-btn" data-id="1">Edit</button>
+    <button class="delete-btn" data-id="1">Delete</button>
+  </div>
+</div>
+<div class="employee-card">
+  <div class="info">
+    <p><strong>Bob Johnson</strong></p>
+    <p><strong>Email:</strong> bob@example.com</p>
+    <p><strong>Department:</strong> IT</p>
+    <p><strong>Role:</strong> Developer</p>
+  </div>
+  <div class="actions">
+    <button class="edit-btn" data-id="2">Edit</button>
+    <button class="delete-btn" data-id="2">Delete</button>
+  </div>
+</div>
+<div class="employee-card">
+  <div class="info">
+    <p><strong>Charlie Lee</strong></p>
+    <p><strong>Email:</strong> charlie@example.com</p>
+    <p><strong>Department:</strong> Finance</p>
+    <p><strong>Role:</strong> Analyst</p>
+  </div>
+  <div class="actions">
+    <button class="edit-btn" data-id="3">Edit</button>
+    <button class="delete-btn" data-id="3">Delete</button>
+  </div>
+</div>
+  </section>
+  </main>
+  <script src="../public/js/data.js"></script>
+  <script type="module" src="../public/js/main.js"></script>
+
+
+</body>
+</html>
