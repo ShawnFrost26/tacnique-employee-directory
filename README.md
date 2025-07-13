@@ -6,28 +6,36 @@ A responsive and modular web app built using Java, Freemarker, HTML/CSS, and van
 
 ## 🚀 Live Demo
 
-*(Optional: Add Netlify/Vercel or local preview screenshot here)*
+🔗 [View on Netlify](https://tacnique-employee-directory.netlify.app/)
+
+<img width="1867" height="862" alt="Screenshot 2025-07-13 143538" src="https://github.com/user-attachments/assets/f065250f-d9e7-4a20-8aff-90c19ead7124" />
 
 ---
 
 ## 🗂 Project Structure
 
+```
 employee-directory/
-├── bin/ # Compiled Java classes
-├── lib/ # Freemarker JAR
-├── output/ # Generated dashboard HTML
-├── public/ # Static assets
-│ ├── css/ # Modular CSS files
-│ └── js/ # Modular JS files
-│   └── ui/ # UI logic (filters, form, search, pagination)
-├── src/
-│ └── FreemarkerRunner.java # Main Java file that renders the HTML
-├── templates/
-│ ├── layout.ftl # Base layout using Freemarker macro
-│ ├── dashboard.ftl # Main view rendering employees
-│ └── components/ # Reusable components (cards, form, sidebars)
+├── bin/                    # Compiled Java classes
+├── lib/                    # Freemarker JAR
+├── output/                 # Generated HTML (index.html + assets for deployment)
+│   └── index.html
+├── public/                 # Static assets (CSS/JS)
+│   ├── css/
+│   └── js/
+│       └── ui/
+├── src/                    # Java source
+│   └── FreemarkerRunner.java
+├── templates/              # Freemarker templates
+│   ├── layout.ftl
+│   ├── dashboard.ftl
+│   └── components/
+│       ├── employee-card.ftl
+│       ├── form-sidebar.ftl
+│       └── filter-sidebar.ftl
 └── README.md
 
+```
 
 
 ## 🛠 Setup & Run Instructions
@@ -40,7 +48,7 @@ employee-directory/
 
 ### ▶️ Steps
 
-```bash
+
 # 1. Compile Java source
 javac -cp ".;lib/freemarker-2.3.34.jar" -d bin src/FreemarkerRunner.java
 
